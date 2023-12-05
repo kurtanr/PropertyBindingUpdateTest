@@ -24,5 +24,15 @@ namespace WpfApp4
         {
             InitializeComponent();
         }
+
+        private void Button_Click_Add(object sender, RoutedEventArgs e)
+        {
+            profDockPanel.Children.Add(new ProfileEditor(checkBox.IsChecked));
+        }
+
+        private void Button_Click_Remove(object sender, RoutedEventArgs e)
+        {
+            profDockPanel.Children.Clear();
+        }
     }
 }

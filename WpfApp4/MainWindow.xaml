@@ -7,10 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid.DataContext>
-            <local:MainWindowViewModel x:Name="mainWinVM" />
-        </Grid.DataContext>
-
-        <CheckBox IsChecked="{Binding OptionEnable}" Content="bacon" />
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+            <Button Content="Add control" VerticalAlignment="Top" Click="Button_Click_Add"></Button>
+            <Button Content="Remove control" VerticalAlignment="Top" Click="Button_Click_Remove"></Button>
+            <CheckBox Name="checkBox" Content="Use INotifyPropertyChanged in view model" />
+        </StackPanel>
+        <DockPanel x:Name="profDockPanel" MinHeight="200" Background="GreenYellow" VerticalAlignment="Center" />
     </Grid>
 </Window>
